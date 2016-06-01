@@ -6096,6 +6096,14 @@
 	background: #72c02c;
 }
 
+.content-boxes-v5 a:hover {
+  color: #72c02c;
+}
+
+.content-boxes-v5 a:visited {
+  color: #555;
+}
+
 /*Content Boxes v6*/
 .content-boxes-v6 {
 	padding-top: 25px;
