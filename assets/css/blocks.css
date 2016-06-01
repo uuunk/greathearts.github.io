@@ -4329,8 +4329,8 @@
 
 .blog-thumb .blog-thumb-hover:hover .hover-grad {
   opacity: 1;
-  transform 0.55s;
-  transition: opacity 0.55s,
+  transform: 0.55s;
+  transition: opacity 0.55s
 }
 
 /*Blog Thumb Description*/
@@ -4595,12 +4595,13 @@
 
 .revolution-ch2 {
   color: #fff;
-  font-size: 20px;
+  font-size: 32px;
   max-width: 470px;
   line-height: 32px;
   position: relative;
   text-align: center;
   font-weight: normal;
+  text-transform: uppercase;
   font-family: "Open Sans", Arial, sans-serif;
 }
 
@@ -4609,7 +4610,7 @@
   width: 70px;
   height: 2px;
   content: ' ';
-  bottom: -20px;
+  bottom: -35px;
   background: #fff;
   margin-left: -35px;
   position: absolute;
