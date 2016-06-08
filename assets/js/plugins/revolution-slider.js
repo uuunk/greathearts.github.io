@@ -12,10 +12,25 @@ var RevolutionSlider = function () {
 	                startwidth:1170,
 	                startheight:500,
 	                hideThumbs:10,
-									navigationStyle:"preview4"
+					navigationStyle:"preview4"
 	            });
 	        });
         },
+
+		//Revolution Slider - Full Width
+		initRSfullWidth2: function () {
+			var revapi;
+			jQuery(document).ready(function() {
+				revapi = jQuery('.tp-banner').revolution(
+					{
+						delay:9000,
+						startwidth:1170,
+						startheight:500,
+						hideThumbs:10,
+						navigationStyle:"preview4"
+					});
+			});
+		},
 
         //Revolution Slider - Full Screen Offset Container
         initRSfullScreenOffset: function () {
