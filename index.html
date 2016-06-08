@@ -43,6 +43,8 @@
     <!--[if lt IE 9]>
     <link rel="stylesheet" href="assets/plugins/revolution-slider/rs-plugin/css/settings-ie8.css" type="text/css"
           media="screen"><![endif]-->
+    <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/css/sky-forms.css">
+    <link rel="stylesheet" href="assets/plugins/sky-forms-pro/skyforms/custom/custom-sky-forms.css">
 
     <!-- CSS Pages Style -->
     <link rel="stylesheet" href="assets/css/pages/page_one.css">
@@ -85,12 +87,13 @@
                     <!--</ul>-->
                     <!--</li>-->
                     <!--<li class="topbar-devider"></li>-->
-                    <li><a href="#">JOIN IN</a></li>
+                    <li><a data-toggle="modal" data-target="#signupModal" href="#">JOIN IN</a></li>
                     <li class="topbar-devider"></li>
-                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#signupModal">Sign In</a></li>
                 </ul>
             </div>
             <!-- End Topbar -->
+
 
             <!-- Toggle get grouped for better mobile display -->
             <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -186,7 +189,7 @@
                          data-captionhidden="off"
                          style="z-index: 6">
                         <!--<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Learn More</a>-->
-                        <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Join In</a>
+                        <a href="#" data-toggle="modal" data-target="#signupModal" class="btn-u btn-brd btn-brd-hover btn-u-light">Join In</a>
                     </div>
                 </li>
                 <!-- END SLIDE -->
@@ -224,7 +227,7 @@
                          data-endeasing="Power1.easeIn"
                          data-captionhidden="off"
                          style="z-index: 6">
-                        <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Tell us your favorite</a>
+                        <a href="#" data-toggle="modal" data-target="#signupModal"  class="btn-u btn-brd btn-brd-hover btn-u-light">Tell us your favorite</a>
                     </div>
                 </li>
                 <!-- END SLIDE -->
@@ -262,7 +265,7 @@
                          data-endeasing="Power1.easeIn"
                          data-captionhidden="off"
                          style="z-index: 6">
-                        <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Tell us your favorite</a>
+                        <a href="#" data-toggle="modal" data-target="#signupModal"  class="btn-u btn-brd btn-brd-hover btn-u-light">Tell us your favorite</a>
                     </div>
                 </li>
                 <!-- END SLIDE -->
@@ -300,7 +303,7 @@
                          data-endeasing="Power1.easeIn"
                          data-captionhidden="off"
                          style="z-index: 6">
-                        <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Tell us your favorite</a>
+                        <a href="#" data-toggle="modal" data-target="#signupModal" class="btn-u btn-brd btn-brd-hover btn-u-light">Tell us your favorite</a>
                     </div>
                 </li>
                 <!-- END SLIDE -->
@@ -338,7 +341,7 @@
                          data-endeasing="Power1.easeIn"
                          data-captionhidden="off"
                          style="z-index: 6">
-                        <a href="#" class="btn-u btn-brd btn-brd-hover btn-u-light">Tell us your favorite</a>
+                        <a href="#" data-toggle="modal" data-target="#signupModal" class="btn-u btn-brd btn-brd-hover btn-u-light">Tell us your favorite</a>
                     </div>
                 </li>
                 <!-- END SLIDE -->
@@ -391,6 +394,60 @@
     <!--</div>-->
     <!--</div>-->
     <!--</div>-->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!--<div class="modal-header">-->
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
+                    <!--<h4 class="modal-title" id="myModalLabel4">Join In!</h4>-->
+                <!--</div>-->
+                <div class="modal-body">
+                    <form method="post" id="signup" class="sky-form">
+                        <fieldset>
+                            <div class="row">
+                                <section class="col col-6">
+                                    <label class="label">First Name</label>
+                                    <label class="input">
+                                        <i class="icon-append fa fa-user"></i>
+                                        <input type="text" name="name" id="name">
+                                    </label>
+                                </section>
+                                <section class="col col-6">
+                                    <label class="label">E-mail</label>
+                                    <label class="input">
+                                        <i class="icon-append fa fa-envelope-o"></i>
+                                        <input type="email" name="email" id="email">
+                                    </label>
+                                </section>
+                            </div>
+
+                            <section>
+                                <label class="label">What are some of your favorite organizations?</label>
+                                <label class="textarea">
+                                    <i class="icon-append fa fa-comment"></i>
+                                    <textarea rows="4" name="favoriteOrgs" id="favoriteOrgs"></textarea>
+                                </label>
+                            </section>
+
+                        </fieldset>
+                        <div class="row text-center" id="signupButtons">
+                            <button type="button" class="btn-u btn-u-default" data-dismiss="modal">Nevermind</button>
+                            <button type="submit" class="btn-u btn-u-primary">Join In!</button>
+                        </div>
+
+                        <div class="message">
+                            <i class="rounded-x fa fa-check"></i>
+                            <p>Thanks! Look out for an email from GreatHearts shortly!</p>
+                            <button type="button" class="btn-u" data-dismiss="modal">Close</button>
+                        </div>
+
+                        <br>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Bootstrap Modals With Forms -->
     <div class="content-md">
         <div class="">
             <div class="container">
@@ -471,7 +528,7 @@
                     <!--<li><i class="fa fa-check"></i> Eleifend eget aliquet tortor, quis lacinia dolor</li>-->
                     <!--</ul>-->
                     <!--<a class="btn-u btn-brd btn-brd-hover btn-u-dark" href="#">Learn More</a>-->
-                    <a class="btn-u" href="#">Join In</a>
+                    <a class="btn-u" data-toggle="modal" data-target="#signupModal" href="#">Join In</a>
                 </div><!--/end row-->
             </div>
         </div>
@@ -493,7 +550,7 @@
                         </p>
                     </div>
                     <!--<a class="btn-u btn-brd btn-brd-hover btn-u-dark" href="#">Learn More</a>-->
-                    <a class="btn-u" href="#">Join In</a>
+                    <a class="btn-u" data-toggle="modal" data-target="#signupModal" href="#">Join In</a>
                 </div>
                 <div class="col-md-6 md-margin-bottom-50">
                     <img alt="" src="assets/img/main/img12.jpg" class="img-responsive wow animated fadeInUp">
@@ -522,7 +579,7 @@
                     <!--<li><i class="fa fa-check"></i> Eleifend eget aliquet tortor, quis lacinia dolor</li>-->
                     <!--</ul>-->
                     <!--<a class="btn-u btn-brd btn-brd-hover btn-u-dark" href="#">Learn More</a>-->
-                    <a class="btn-u" href="#">Join In</a>
+                    <a class="btn-u" data-toggle="modal" data-target="#signupModal" href="#">Join In</a>
                 </div><!--/end row-->
             </div>
         </div>
@@ -541,7 +598,7 @@
                         </p>
                     </div>
                     <!--<a class="btn-u btn-brd btn-brd-hover btn-u-dark" href="#">Learn More</a>-->
-                    <a class="btn-u" href="#">Join In</a>
+                    <a class="btn-u" data-toggle="modal" data-target="#signupModal"  href="#">Join In</a>
                 </div>
                 <div class="col-md-6 md-margin-bottom-50">
                     <img alt="" src="assets/img/main/img12.jpg" class="img-responsive wow animated fadeInUp">
@@ -571,7 +628,7 @@
                     <!--<li><i class="fa fa-check"></i> Eleifend eget aliquet tortor, quis lacinia dolor</li>-->
                     <!--</ul>-->
                     <!--<a class="btn-u btn-brd btn-brd-hover btn-u-dark" href="#">Learn More</a>-->
-                    <a class="btn-u" href="#">Join In</a>
+                    <a class="btn-u" data-toggle="modal" data-target="#signupModal" href="#">Join In</a>
                 </div><!--/end row-->
             </div>
         </div>
@@ -590,7 +647,7 @@
                         </p>
                     </div>
                     <!--<a class="btn-u btn-brd btn-brd-hover btn-u-dark" href="#">Learn More</a>-->
-                    <a class="btn-u" href="#">Join In</a>
+                    <a class="btn-u" data-toggle="modal" data-target="#signupModal" href="#">Join In</a>
                 </div>
                 <div class="col-md-6 md-margin-bottom-50">
                     <img alt="" src="assets/img/main/img12.jpg" class="img-responsive wow animated fadeInUp">
@@ -1186,6 +1243,12 @@
 <script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
 <script type="text/javascript" src="assets/plugins/image-hover/js/touch.js"></script>
 <script type="text/javascript" src="assets/plugins/image-hover/js/modernizr.js"></script>
+<script type="text/javascript" src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+<script type="text/javascript" src="assets/js/forms/signup.js"></script>
+<script src="https://drrjhlchpvi7e.cloudfront.net/libs/stamplay-js-sdk/2.0.5/stamplay.min.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function () {
         App.init();
@@ -1193,6 +1256,7 @@
         StyleSwitcher.initStyleSwitcher();
         RevolutionSlider.initRSfullWidth();
         OwlCarousel.initOwlCarousel();
+        SignupForm.initSignupForm();
     });
 </script>
 <!--[if lt IE 9]>
