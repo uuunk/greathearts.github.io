@@ -18,16 +18,18 @@ var RevolutionSlider = function () {
         },
 
 		//Revolution Slider - Full Width
-		initRSfullWidth2: function () {
+		initRSGreatHearts: function () {
 			var revapi;
 			jQuery(document).ready(function() {
 				revapi = jQuery('.tp-banner').revolution(
 					{
-						delay:9000,
+						delay:7000,
 						startwidth:1170,
 						startheight:500,
 						hideThumbs:10,
-						navigationStyle:"preview4"
+						navigationStyle:"preview4",
+						disableProgressBar: 'on',
+						spinner: "spinner5"
 					});
 			});
 		},
