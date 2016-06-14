@@ -23,7 +23,7 @@ var RevolutionSlider = function () {
 			jQuery(document).ready(function() {
 				revapi = jQuery('.tp-banner').revolution(
 					{
-						delay:7000,
+						delay:5500,
 						startwidth:1170,
 						startheight:500,
 						hideThumbs:10,
