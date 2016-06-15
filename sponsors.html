@@ -69,37 +69,115 @@
     </div>
     <div class="content-md">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <br><br><br>
-                    <div class="headline-center">
-                        <h2>Great Hearts offers sponsorship opportunities for corporations, foundations and individuals.
-                            Sponsorship provides a way to meet your firm’s philanthropic and marketing goals. By
-                            sponsoring Great Hearts, you are helping to expand the giving community.
-                        </h2>
-                        <h3>Founding Sponsorship</h3>
-                        <p>Founding sponsorship contributions are used to support our core initiatives. Your
-                            contribution enables 100 percent of the individual’s gift to go directly to the cause or
-                            nonprofit. This type of sponsorship gives prominent recognition to your firm but is not tax
-                            deductible since Great Hearts is a social enterprise rather than a nonprofit organization.
-                        </p>
-                        <h3>Sponsorship of the Givers’ Choice Award</h3>
-                        <p>Sponsorship of a Giver’s Choice Award is fully tax deductible. 100 percent of the
-                            contribution goes to the nonprofit organizations that are selected for the award. As a
-                            sponsor, you may either select a specific category of causes (e.g. health, homelessness,
-                            conservation) or provide funding for a general (all causes are eligible) award.
-                        </p>
-                        <h4>For more information on sponsoring, please contact us.</h4>
+            <div class="headline-center">
+                <h2>Sponsorship Opportunities</h2>
+                <p>Great Hearts offers sponsorship opportunities for corporations, foundations and individuals.
+                    Sponsorship provides a way to meet your firm’s philanthropic and marketing goals. By
+                    sponsoring Great Hearts, you are helping to expand the giving community.
+                </p>
+            </div>
+            <div class="row margin-bottom-30">
+                <div class="col-md-6">
+                    <div class="service-block-v8 bg-color-light">
+                        <i class="icon-rocket"></i>
+                        <div class="service-block-desc">
+                            <h3>Founding Sponsorship</h3>
+                            <p>Founding sponsorship contributions are used to support our core initiatives. Your
+                                contribution enables 100 percent of the individual’s gift to go directly to the cause or
+                                nonprofit. This type of sponsorship gives prominent recognition to your firm but is not
+                                tax
+                                deductible since Great Hearts is a social enterprise rather than a nonprofit
+                                organization.
+                            </p>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-6">
+                    <div class="service-block-v8 bg-color-light">
+                        <i class="icon-bubbles"></i>
+                        <div class="service-block-desc">
+                            <h3>Sponsorship of the Givers’ Choice Award</h3>
+                            <p>Sponsorship of a Giver’s Choice Award is fully tax deductible. 100 percent of the
+                                contribution goes to the nonprofit organizations that are selected for the award. As a
+                                sponsor, you may either select a specific category of causes (e.g. health, homelessness,
+                                conservation) or provide funding for a general (all causes are eligible) award.
+                            </p></div>
                     </div>
                 </div>
+            </div>
+            <div class="row">
+                <div class="headline-center">
+                <h2>Contact Us</h2>
+                </div>
+            </div>
+            <div class="row">
+                <form method="post" id="sponsor" class="sky-form">
+                    <header>For more information on sponsoring, please contact us</header>
+
+                    <fieldset>
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="label">First Name</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-user"></i>
+                                    <input type="text" name="firstName" id="firstName">
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <label class="label">Last Name (optional)</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-user"></i>
+                                    <input type="text" name="lastName" id="lastName">
+                                </label>
+                            </section>
+                        </div>
+                        <div class="row">
+                            <section class="col col-6">
+                                <label class="label">E-mail</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-envelope-o"></i>
+                                    <input type="email" name="email" id="email">
+                                </label>
+                            </section>
+                            <section class="col col-6">
+                                <label class="label">Phone Number (optional)</label>
+                                <label class="input">
+                                    <i class="icon-append fa fa-phone"></i>
+                                    <input type="phone" name="phone" id="phone">
+                                </label>
+                            </section>
+                        </div>
+
+                        <section>
+                            <label class="label">Message</label>
+                            <label class="textarea">
+                                <i class="icon-append fa fa-comment"></i>
+                                <textarea rows="4" name="message" id="message"></textarea>
+                            </label>
+                        </section>
+
+                    </fieldset>
+
+                    <footer>
+                        <button type="submit" id="submitButton" class="button">Send message</button>
+                    </footer>
+
+                    <div class="message">
+                        <i class="rounded-x fa fa-check"></i>
+                        <p>Your message was successfully sent!</p>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
 
 
-    <!--=== Footer Version 1 ===-->
-    <div id="footer"></div>
-    <!--=== End Footer Version 1 ===-->
+
+<!--=== Footer Version 1 ===-->
+<div id="footer"></div>
+<!--=== End Footer Version 1 ===-->
 </div><!--/wrapper-->
 
 
@@ -131,7 +209,7 @@
 <script type="text/javascript" src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
 <script type="text/javascript" src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
 <script type="text/javascript" src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
-<script type="text/javascript" src="assets/js/forms/signup.js"></script>
+<script type="text/javascript" src="assets/js/forms/sponsor.js"></script>
 <script src="https://drrjhlchpvi7e.cloudfront.net/libs/stamplay-js-sdk/2.0.5/stamplay.min.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function () {
@@ -141,7 +219,7 @@
         FancyBox.initFancybox();
         RevolutionSlider.initRSGreatHearts();
         OwlCarousel.initOwlCarousel();
-        SignupForm.initSignupForm();
+        SponsorForm.initSponsorForm();
     });
 </script>
 <!--[if lt IE 9]>
