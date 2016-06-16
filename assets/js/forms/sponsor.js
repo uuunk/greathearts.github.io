@@ -15,7 +15,11 @@ var SponsorForm = function () {
                     },
                     lastName:
                     {
-                        required: false
+                        required: true
+                    },
+                    orgName:
+                    {
+                        required: true
                     },
                     email:
                     {
@@ -42,7 +46,15 @@ var SponsorForm = function () {
                     },
                     firstName:
                     {
-                        required: 'Please enter your name'
+                        required: 'Please enter your first name'
+                    },
+                    lastName:
+                    {
+                        required: 'Please enter your last name'
+                    },
+                    orgName:
+                    {
+                        required: 'Please enter the name of your organization or company'
                     }
                 },
 
@@ -56,6 +68,7 @@ var SponsorForm = function () {
                         "email": $(form).find("#email").val(),
                         "firstName": $(form).find("#firstName").val(),
                         "lastName": $(form).find("#lastName").val(),
+                        "orgName": $(form).find("#orgName").val(),
                         "phone": $(form).find("#phone").val(),
                         "message": $(form).find("#message").val(),
                     };
