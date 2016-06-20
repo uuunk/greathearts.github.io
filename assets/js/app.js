@@ -237,6 +237,17 @@ var App = function () {
 		jQuery('.popovers-destroy').popover('destroy');
 	}
 
+	function handlePageScroll() {
+
+		jQuery('.page-scroll').bind('click', function (event) {
+			var $position = jQuery(jQuery(this).attr('href')).offset().top;
+			jQuery('html, body').stop().animate({
+				scrollTop: $position
+			}, 600);
+			event.preventDefault();
+		});
+	}
+
 	return {
 		init: function () {
 			handleBootstrap();
@@ -253,6 +264,7 @@ var App = function () {
 			handleValignMiddle();
 			handleEqualHeightColumns();
 			handleEqualHeightColumns__Images();
+			handlePageScroll();
 		},
 
 		// Counters
