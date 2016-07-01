@@ -4411,13 +4411,20 @@
   [36. Shop Subscribe]
 ----------------------------------------------------*/
 .shop-subscribe {
-  padding: 25px 0;
+  padding: 15px 0;
 }
 
 .shop-subscribe h2 {
   margin: 0;
   color: #fff;
   font-size: 24px;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.shop-subscribe h5, .shop-subscribe h4 {
+  margin: 0;
+  color: #fff;
   font-weight: 200;
   text-transform: uppercase;
 }
