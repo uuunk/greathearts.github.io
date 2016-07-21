@@ -4422,7 +4422,7 @@
   text-transform: uppercase;
 }
 
-.shop-subscribe h5, .shop-subscribe h4 {
+.shop-subscribe h5, .shop-subscribe h4, .shop-subscribe h6 {
   margin: 0;
   color: #fff;
   font-weight: 200;
