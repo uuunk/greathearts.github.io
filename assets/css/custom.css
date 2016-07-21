@@ -15,12 +15,12 @@
 }
 
 .ribbon-wrapper-green {
-    width: 140px;
-    height: 140px;
+    width: 185px;
+    height: 200px;
     overflow: hidden;
     position: absolute;
-    z-index: -1;
-    top: -3px;
+    z-index: 2;
+    top: -15px;
     right: -3px;
 }
 
@@ -35,9 +35,9 @@
     -o-transform:      rotate(45deg);
     position: relative;
     padding: 7px 0;
-    left: -19px;
-    top: 40px;
-    width: 200px;
+    left: -35px;
+    top: 50px;
+    width: 300px;
     background-color: #BFDC7A;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#BFDC7A), to(#8EBF45));
     background-image: -webkit-linear-gradient(top, #BFDC7A, #8EBF45);
