@@ -40,20 +40,15 @@ var welcomeTile = function () {
                         "message": $(form).find("#message").val()
                     };
 
+                    $('#submitButton i').addClass('fa fa-spinner fa-spin');
 
-                    var userId;
                     Stamplay.User.get({email: formData.email})
                         .then(function (res) {
                                 if (res.data.length === 0) {//new user
                                     Stamplay.Object("signups")
                                         .save({"email": formData.email, "firstName": formData.name})
                                         .then(function (res) {
-                                            Stamplay.User.get({email: formData.email})
-                                                .then(function (res) {
-                                                    sendTile(res.data[0].id);
-                                                }, function (err) {
-                                                    console.log(err);
-                                                });
+                                            setTimeout(getUserId(), 1000);
                                         }, function (err) {
                                             console.log(err);
                                         });
@@ -65,6 +60,19 @@ var welcomeTile = function () {
                             function (err) {
                                 console.log(err);
                             });
+
+                    var getUserId = function () {
+                        Stamplay.User.get({email: formData.email})
+                            .then(function (res) {
+                                if (res.data[0].id) {
+                                    sendTile(res.data[0].id);
+                                } else {
+                                    setTimeout(getUserId(), 1000);
+                                }
+                            }, function (err) {
+                                console.log(err);
+                            });
+                    };
 
                     var sendTile = function (userId) {
                         var data =
