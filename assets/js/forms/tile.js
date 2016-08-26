@@ -1,11 +1,11 @@
-var welcomeTile = function () {
+var Tile = function () {
 
     return {
 
         //Comment Form
-        initWelcomeTileForm: function () {
+        initTileForm: function () {
             // Validation
-            $("#welcome").validate({
+            $("#tileForm").validate({
                 // Rules for form validation
                 rules: {
                     name: {
@@ -37,7 +37,8 @@ var welcomeTile = function () {
                         "recipient": $(form).find("#recipient").val(),
                         "email": $(form).find("#email").val(),
                         "name": $(form).find("#name").val(),
-                        "message": $(form).find("#message").val()
+                        "message": $(form).find("#message").val(),
+                        "tileType": $(form).find("#tileType").val()
                     };
 
                     $('#submitButton i').addClass('fa fa-spinner fa-spin');
@@ -80,7 +81,7 @@ var welcomeTile = function () {
                             "content": {"message": formData.message},
                             "giver_id": userId,
                             "recipient_id": formData.recipient,
-                            "type": "5796692ce302c0b37c10bfd4"
+                            "type": formData.tileType,
                         };
 
                         Stamplay.Object("tiles")
