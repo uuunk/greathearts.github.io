@@ -65,7 +65,7 @@ var Tile = function () {
                     var getUserId = function () {
                         Stamplay.User.get({email: formData.email})
                             .then(function (res) {
-                                if (res.data[0].id) {
+                                if (res.data.length > 0 && res.data[0].id) {
                                     sendTile(res.data[0].id);
                                 } else {
                                     setTimeout(getUserId(), 1000);
