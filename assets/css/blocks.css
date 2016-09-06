@@ -1887,7 +1887,13 @@
   margin-top: 5px;
   font-size: 18px;
   font-weight: 200;
-  margin-bottom: 0;
+  margin-bottom: 10px;
+}
+
+.call-action-v1 ul li {
+  font-size: 16px;
+  text-align: left;
+  font-weight: 200;
 }
 
 .call-action-v1.call-action-v1-boxed {
@@ -1909,7 +1915,7 @@
 .call-action-v1 .call-action-v1-in.inner-btn {
   padding-top: 1px;
   min-width: 250px;
-  text-align: right;
+  text-align: center;
 }
 
 @media (max-width: 992px) {

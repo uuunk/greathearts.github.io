@@ -493,6 +493,17 @@ h3.heading-xs {
 
 /*Devider
 ------------------------------------*/
+.divider {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.divider.divider-green {
+    border-top: 1px solid #72c02c;
+    width: 20%;
+    display: inline-block;
+}
+
 .devider.devider-dotted {
 	border-top: 2px dotted #eee;
 }
@@ -2341,6 +2352,10 @@ img.image-md {
 .padding-sm { padding: 40px 40px;}
 .padding-top-5 { padding-top: 5px;}
 .padding-left-5 { padding-left: 5px;}
+
+.padding-top-25 {
+    padding-top: 25px;
+}
 
 /*Text Colors
 ------------------------------------*/
