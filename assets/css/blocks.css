@@ -1922,7 +1922,7 @@
   .call-action-v1 .call-action-v1-in,
   .call-action-v1 .call-action-v1-in.inner-btn {
     display: block;
-    text-align: center;
+      text-align: left;
   }
 
   .call-action-v1 .call-action-v1-in p {
