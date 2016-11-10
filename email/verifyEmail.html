@@ -1,8 +1,9 @@
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Welcome To Great Hearts</title>
+
 
     <style type="text/css">
         .ReadMsgBody {
@@ -21,7 +22,7 @@
             margin: 0;
             padding: 0;
             -webkit-font-smoothing: antialiased;
-            font-family: Arial, Helvetica, sans-serif
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         table {
@@ -34,9 +35,13 @@
                 padding: 0;
             }
 
+        }
+
+        @media only screen and (max-width: 640px) {
             body[yahoo] .center {
                 text-align: center !important;
             }
+
         }
 
         @media only screen and (max-width: 479px) {
@@ -45,11 +50,14 @@
                 padding: 0;
             }
 
+        }
+
+        @media only screen and (max-width: 479px) {
             body[yahoo] .center {
                 text-align: center !important;
             }
-        }
-    </style>
+
+        }</style>
 </head>
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" yahoo="fix"
       style="font-family: Arial, Helvetica, sans-serif">
@@ -60,11 +68,11 @@
         <td width="100%" valign="top" bgcolor="#ffffff" style="padding-top:20px">
 
             <!--Start Header-->
-            <table width="700" bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" align="center"
+            <table width="600" bgcolor="#fff" border="0" cellpadding="0" cellspacing="0" align="center"
                    class="deviceWidth">
                 <tr>
                     <td style="padding: 6px 0px 0px">
-                        <table width="650" border="0" cellpadding="0" cellspacing="0" align="center"
+                        <table width="550" border="0" cellpadding="0" cellspacing="0" align="center"
                                class="deviceWidth">
                             <tr>
                                 <td width="100%">
@@ -73,8 +81,8 @@
                                            class="deviceWidth">
                                         <tr>
                                             <td class="center" style="padding: 20px 0px 10px 0px">
-                                                <a href="http://greathearts.community"><img
-                                                        src="http://greathearts.community/assets/img/GHILogo2.png"></a>
+                                                <a href="http://www.greathearts.community"><img
+                                                        src="http://www.greathearts.community/assets/img/GHILogo2.png"></a>
                                             </td>
                                         </tr>
                                     </table><!--End logo-->
@@ -86,19 +94,84 @@
             </table>
             <!--End Header-->
 
-            <table width="700" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
+            <!--Start Right Picture-->
+            <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
+                <tr>
+                    <td width="100%" valign="top" style="padding: 0px " class="center">
+                        <img mc:edit="header_image" class="deviceWidth" width="600"
+                             src="http://www.greathearts.community/assets/img/email/girls-water.png">
+                    </td>
+                </tr>
                 <tr>
                     <td width="100%" bgcolor="#fff">
+                        <!--Left box-->
                         <table width="100%" align="left" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
                             <tr>
-                                <td style="font-size: 16px; color: #303030; font-weight: bold; text-align: center; font-family: Arial, Helvetica, sans-serif; line-height: 25px; vertical-align: middle; padding: 20px 20px 0px 1px; ">
-                                    Hi {{user}}
+                                <td mc:edit="section_1_title"
+                                    style="font-size: 16px; color: #303030; font-weight: bold; text-align: center; font-family: Arial, Helvetica, sans-serif; line-height: 25px; vertical-align: middle; padding: 20px 10px 0; ">
+                                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tbody>
+                                        <tr>
+                                            <td>Your first set of Ribbon Tiles</td>
+                                        </tr>
+                                        <tr>
+                                        </tr>
+                                        </tbody>
+                                    </table>
                                 </td>
                             </tr>
                             <tr>
-                                <td style="font-size: 14px; color: #b3b2b2; font-weight: bold; text-align: center; font-family: Arial, Helvetica, sans-serif; line-height: 25px; vertical-align: middle; padding: 0 20px 20px 40px; ">
-                                    Yes, an email to confirm an email. We want to be sure that we have it right.
-                                    Please take a second to click the button.
+                                <td valign="top"
+                                    style="padding: 20px 0px 0px 0px; vertical-align: middle; text-align: center"
+                                    class="center">
+                                    <div style="text-align: center;" mc:edit="section_1_image"><img
+                                            src="http://www.greathearts.community/assets/img/email/3Tiles.png" alt=""
+                                            border="0" style="border-style:dotted; margin: 0; padding: 0;"
+                                            class="deviceWidth"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td mc:edit="section_1_body"
+                                    style="font-size: 12px; color: #878686; font-weight: bold; text-align: center; font-family: Arial, Helvetica, sans-serif; line-height: 25px; vertical-align: middle; padding: 20px;">
+                                    You've received 3 ribbon tiles for when the Giver's Choice Award begins in November.
+                                    Each tile is placed on the organization of your choice and serves as vote for that
+                                    organization. The more ribbon tiles an organization gets, the better the chance they
+                                    have to win the Giver's Choice Award.
+                                </td>
+                            </tr>
+                        </table><!--End Left box-->
+                        <!-- Right box  -->
+
+                    </td>
+                </tr>
+            </table>
+            <!--Start Left Picture-->
+            <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
+                <tr>
+                    <td width="100%" bgcolor="#f7f7f7">
+                        <!-- Left box  -->
+                        <table width="40%" align="left" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                            <tr>
+                                <td valign="middle" style="padding: 35px 20px 10px 20px; text-align: center">
+                                    <img width="140" mc:edit="section_2_image"
+                                         src="http://www.greathearts.community/assets/img/orgs/Elevarte.jpg">
+                                </td>
+                            </tr>
+                        </table> <!--End left box-->
+                        <!--Right box-->
+                        <table width="60%" align="left" border="0" cellpadding="0" cellspacing="0" class="deviceWidth">
+                            <tr>
+                                <td mc:edit="section_2_title"
+                                    style="font-size: 16px; color: #303030; font-weight: bold; text-align: center; font-family: Arial, Helvetica, sans-serif; line-height: 25px; vertical-align: middle; padding: 20px; ">
+                                    ElevArte Studio
+                                </td>
+                            </tr>
+                            <tr>
+                                <td mc:edit="section_2_body"
+                                    style="font-size: 12px; color: #878686; font-weight: bold; text-align: center; font-family: Arial, Helvetica, sans-serif; line-height: 25px; vertical-align: middle; padding: 0 20px 20px 20px; ">
+                                    Thought you&rsquo;d enjoy seeing one of the favorite causes that another member has
+                                    recommended. ElevArte is a community-based organization which uses the arts as a
+                                    portal for creative youth development.
                                 </td>
                             </tr>
                             <tr>
@@ -108,24 +181,43 @@
                                             <td valign="top"
                                                 style="padding: 7px 15px; text-align: center; background-color: #74C52C;"
                                                 class="center">
-                                                <a style="color: #fff; font-size: 12px; font-weight: bold; text-decoration: none; font-family: Arial, sans-serif; text-alight: center;"
-                                                   href="{{activationLink}}" target="_blank">VERIFY EMAIL</a>
+                                                <a mc:edit="section_2_link"
+                                                   style="color: #fff; font-size: 12px; font-weight: bold; text-decoration: none; font-family: Arial, sans-serif; text-alight: center;"
+                                                   href="http://elevartestudio.org">CHECK THEM OUT</a>
                                             </td>
                                         </tr>
                                     </table>
                                 </td>
                             </tr>
-                            <tr>
-                                <td style="font-size: 13px; color: #b3b2b2; font-weight: bold; text-align: center; font-family: Arial, Helvetica, sans-serif; line-height: 25px; vertical-align: middle; padding: 0 20px 20px 40px; ">
-                                    You can also copy and paste this link if there is something wrong with the button: {{activationLink}}. If you're having any trouble feel free to email us at info@greathearts.give.
-                                </td>
-                            </tr>
-                        </table>
+                        </table><!--End right box-->
                     </td>
                 </tr>
             </table>
+            <!--End Left Picture-->
+
+            <!-- Footer -->
+            <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="deviceWidth">
+                <tr>
+                    <td class="center"
+                        style="font-size: 12px; color: #687074; font-weight: bold; text-align: center; font-family: Arial, Helvetica, sans-serif; line-height: 25px; vertical-align: middle; padding: 20px 10px 0px; ">
+                        <p>
+                            Contact us if you have ideas, questions and/or recommendations. We’d love to hear from
+                            you.<br>
+                            <a href="mailto:info@greathearts.community">info@greathearts.community</a>
+                            <br>
+                            Copyright (C) Great Hearts Initiatives LLC All rights reserved.<br>
+                    </td>
+                </tr>
+
+            </table>
+            <!--End Footer-->
+
+            <div style="height:15px">&nbsp;</div><!-- divider-->
+
+
         </td>
     </tr>
 </table>
+<!-- End Wrapper -->
 </body>
 </html>
