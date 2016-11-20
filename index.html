@@ -519,51 +519,28 @@
                         and give ribbons
                         tiles
                         for the <em>Giver's Choice Awards</em>.</h5>
-                    <form method="post" id="signup" class="sky-form">
-                        <fieldset>
-                            <div class="row">
-                                <section class="col col-6">
-                                    <label class="label">Name</label>
-                                    <label class="input">
-                                        <i class="icon-append fa fa-user"></i>
-                                        <input type="text" name="name" id="name">
-                                    </label>
-                                </section>
-                                <section class="col col-6">
-                                    <label class="label">E-mail</label>
-                                    <label class="input">
-                                        <i class="icon-append fa fa-envelope-o"></i>
-                                        <input type="email" name="email" id="email">
-                                    </label>
-                                </section>
-                            </div>
+                    <div id="auth0-root" style="width: 320px; margin: 40px auto; padding: 10px;"></div>
+                    <script src="https://cdn.auth0.com/js/lock/10.0/lock.min.js"></script>
+                    <script type="text/javascript">
+                        var lock = new Auth0Lock('H3M1d2hsFo2hISIz6CUD6okg7Dew6rDI', 'greathearts.auth0.com', {
+                            container: 'auth0-root',
+                            auth: {
+                                redirectUrl: 'https://app.greathearts.community/auth/auth0/callback',
+                                responseType: 'code',
+                                params: {
+                                    scope: 'openid email', // Learn about scopes: https://auth0.com/docs/scopes
+                                }
+                            },
+                            theme: {
+                                logo: "assets/img/GHILogo2.png",
+                                primaryColor: '#72C02C'
+                            },
+                            rememberLastLogin: false,
+                            initialScreen: 'signUp',
+                        });
 
-                            <section>
-                                <label class="label"><strong>Favorite causes and nonprofits you recommend
-                                    (optional)</strong></label>
-                                <label class="textarea">
-                                    <i class="icon-append fa fa-comment"></i>
-                                    <textarea rows="4" name="favoriteOrgs" id="favoriteOrgs"></textarea>
-                                </label>
-                            </section>
-
-                        </fieldset>
-                        <p class="text-center"><strong>Watch your email for your first ribbon tiles.</strong></p>
-                        <div class="row text-center" id="signupButtons">
-                            <!--<button type="button" class="btn-u btn-u-default" data-dismiss="modal">Nevermind</button>-->
-                            <button type="submit" class="btn-u btn-u-primary">Join In!</button>
-                        </div>
-
-                        <div class="message">
-                            <i class="rounded-x fa fa-check"></i>
-                            <p>Thanks! Look out for a verification email from Great Hearts shortly!</p>
-
-                            <!--<p>In July and August, watch your email for griggles. You may see one of your favorite nonprofits featured. Also, you’ll receive your first ribbon tiles for voting in the Giver’s Choice Award.</p>-->
-                            <button type="button" class="btn-u" data-dismiss="modal">Close</button>
-                        </div>
-
-                        <br>
-                    </form>
+                        lock.show();
+                    </script>
 
                 </div>
             </div>

@@ -65,3 +65,15 @@
 .ribbon-green:after {
     right: 0;
 }​
+ #auth0-root .auth0-lock.auth0-lock .auth0-lock-header {
+     height: auto;
+ }
+
+#auth0-root .auth0-lock-name {
+    display: none;
+}
+
+#auth0-root .auth0-lock.auth0-lock .auth0-lock-header-logo {
+    width: 100%;
+    height: auto;
+}
