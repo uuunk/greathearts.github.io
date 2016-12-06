@@ -77,3 +77,13 @@
     width: 100%;
     height: auto;
 }
+@media (max-width: 560px) {
+  .discover-box {
+    width: 400px;
+  }
+}
+@media (max-width: 500px) {
+  .discover-box {
+    width: 300px;
+  }
+}
