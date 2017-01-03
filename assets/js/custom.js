@@ -1,4 +1,4 @@
-$("#testing").ready(function() {
+$(".testing").ready(function() {
   var request = $.ajax({
     url: 'http://localhost:3000/orgs_list',
     method: 'get',
