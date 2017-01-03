@@ -6,7 +6,7 @@ $(".testing").ready(function() {
   });
 
   request.done(function(orgsJson){
-    $('.testing).children().remove();
+    $('.testing').children().remove();
     $.each(orgsJson, function(index,value){
 
       $(".testing").append("<li><figure class='org-square flex-vertically-center-content'><img src=" + value.logo_link + " alt="+ value.name + "><div class='img-hover'><a href=" + value.link + " target='_blank'><h4>" + value.name + "</h4></a></div></figure></li>")
