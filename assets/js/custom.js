@@ -6,10 +6,10 @@ $(".testing").ready(function() {
   });
 
   request.done(function(orgsJson){
-    $('#effect-2').children().remove();
+    $('.testing).children().remove();
     $.each(orgsJson, function(index,value){
 
-      $(".testing").append("<li><figure class='org-square flex-vertically-center-content'><img src=" + value.logo_link + " alt="+ value.name + "><div class='img-hover'><a href=" + value.link + " target='_blank'><h4>" + value.name + "</h4></a></div></figure></li>").css("background0image", "url("+value.logo_link+")")
+      $(".testing").append("<li><figure class='org-square flex-vertically-center-content'><img src=" + value.logo_link + " alt="+ value.name + "><div class='img-hover'><a href=" + value.link + " target='_blank'><h4>" + value.name + "</h4></a></div></figure></li>")
 
 
     });
