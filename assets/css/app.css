@@ -1122,6 +1122,29 @@ a:focus {
 figure {
   margin: 0;
 }
+.org-square {
+  width: 100px;
+  height: 100px;
+  vertical-align: middle;
+  text-align: center;
+  overflow: hidden;  
+}
+.flex-horizontally-center-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.flex-vertically-center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.org-square > img {
+  max-height: 100%;
+  max-width: 100%;
+  position: absolute;
+  left: 0px;
+}
 img {
   vertical-align: middle;
 }

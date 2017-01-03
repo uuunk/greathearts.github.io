@@ -19,9 +19,6 @@
 }
 
 .our-clients img {
-    padding: 15px;
-    width: 142px;
-    height: auto;
     vertical-align: middle;
 }
 
@@ -32,8 +29,7 @@ figure {
 }
 figure img {
     z-index: 10;
-    height: auto;
-    max-width: 100%;
+
     text-align: center;
     position: relative;
     display: inline-block;
