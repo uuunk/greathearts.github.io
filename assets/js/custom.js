@@ -1,6 +1,6 @@
 $(".testing").ready(function() {
   var request = $.ajax({
-    url: 'http://localhost:3000/api/v1/organizations',
+    url: 'https://great-hearts-app.herokuapp.com/api/v1/organizations',
     method: 'get',
     crossDomain: true
   });
