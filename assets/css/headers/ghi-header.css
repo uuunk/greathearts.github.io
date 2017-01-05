@@ -1,72 +1,8 @@
-.main-navbar {
-		color: black;
-	font-size: 14px;
-	background-color: white;
-	border-bottom: 5px solid #72C02C;
-	border-radius: 0;
-  .search-wrap {
-    border-left: 1px solid #A2A2A2;
-    margin: 0px;
-    padding: 0px;
-    position: absolute;
-    left: 600px;
-    @include media-breakpoint-down(md) {
-      position: static;
-      border: none;
-    }
+@media (min-width: 768px){
+  .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+      margin-right: 0;
+      margin-left: 200px;
   }
-  #navbar-search {
-    margin-left: 55px;
-    padding-left: 28px;
-
-    @include media-breakpoint-down(md) {
-      margin-left: 10px;
-    }
-    .search-button {
-      background: none;
-      border: none;
-      @include media-breakpoint-down(md) {
-        position: absolute;
-        left: 260px;
-        top: 150px;
-      }
-    }
-
-    i {
-      color: #A2A2A2;
-    }
-
-    input {
-      border: none;
-      padding-bottom: 9px;
-      margin-left: 30px;
-      height: 35px;
-      width: 205px;
-      @include media-breakpoint-down(md) {
-        margin-left: 0px;
-        width: 200px;
-        border: 1px solid #A2A2A2;
-      }
-    }
-  }
-}
-
-.loginbar {
-	margin-left:625px;
-	margin-top: 13px;
-	list-style: none
-}
-.navbar {
-	margin:0px;
-}
-.nav-container {
-	position: absolute;
-	left: 210px;
-	top: -5px;
-}
-.nav-container a {
-	color: black;
-	font-weight: 400;
 }
 .logo > img {
  	max-width: 170px;
@@ -76,20 +12,28 @@
 	top: 5px;
 	left: 6px;
 }
-
-.nav-item {
-  .nav-link {
-    color: black;
-  }
-}
-.nav-item:hover {
-  text-decoration: underline;
+.navbar-default {
+  border-bottom: 5px solid #72C02C;
+  background-color: white;
 }
 
-.nav-item:first-child {
-  margin-left: 3rem;
+#navbar-search {
+  margin-left: 55px;
+  padding-left: 28px;
+  border-left: 1px solid #A2A2A2;
 }
-
-.nav-item + .nav-item {
-  margin-left: 3rem;
+#navbar-search > .form-group > input {
+  border: none;
+  width: 205px;
+}
+.navbar {
+  margin: 0px;
+}
+#search-btn {
+  border: none;
+  color: #A2A2A2;
+}
+.navbar-default .navbar-nav>li>a {
+  color: black;
+  font-size: 14px;
 }
