@@ -1,4 +1,4 @@
-$(".testing").ready(function() {
+$(document).ready(function() {
   var request = $.ajax({
     url: 'https://app.greathearts.community/api/v1/organizations',
     method: 'get',
@@ -13,5 +13,11 @@ $(".testing").ready(function() {
 
 
     });
+  });
+
+  $('#navbar-search').on('keyup', 'input', function(e) {
+  	e.preventDefault();
+    var query = this.value;
+    $("#search-link").attr('href', 'https://app.greathearts.community/search_results?utf8=✓&query=' + query.split(' ').join('+'));
   });
 })  
