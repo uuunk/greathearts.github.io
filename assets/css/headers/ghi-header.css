@@ -1,3 +1,4 @@
+
 @media (max-width: 767px){
   #login-mobile {
     right: 35%;
@@ -75,6 +76,9 @@
 }
 
 @media (min-width: 768px){
+  .navbar-header {
+    height: 50px;
+  }
   #login-mobile, #signup-mobile  {
     visibility: hidden;
     list-style: none;
@@ -131,6 +135,9 @@
   .navbar-nav {
       left: 23%;
       position: absolute;
+  }
+  #login > li > .signup-button {
+    margin-left: 10px;
   }
 }
 
@@ -251,4 +258,42 @@
   color: black;
   font-size: 14px;
 }
-
+.navbar-default .navbar-nav>li> .btn-primary {
+  color: white;
+  padding: 5px;
+}
+.navbar-default .navbar-nav>li> .btn-primary:hover {
+  background-color: #599722;
+  color: white;
+  border: none;
+}
+#login > li {
+  margin-top: 7px;
+}
+.btn-primary, #login-mobile, #signup-mobile {
+    max-height: 40px;
+    padding-top: 7px;
+    color: white;
+    background-color: #72C02C;
+    border-color: #72C02C;
+    background-color: #72C02C;
+    margin: 2px;
+    display: inline-block;
+    font-weight: normal;
+    line-height: 1.25;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 11px;
+    border-radius: 0.25rem;
+}
+.navbar-collapse.collapse {
+    height: 55px;
+}
