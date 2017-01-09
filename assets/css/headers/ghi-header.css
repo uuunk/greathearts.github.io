@@ -1,12 +1,16 @@
 @media (max-width: 767px){
   #login-mobile {
     right: 35%;
-    font-size: 11px;
+    font-size: 13px;
     margin-right:5px;
+    padding-left: 3px;
+    padding-right: 3px;
   }
   #signup-mobile {
-    font-size: 11px;
+    font-size: 13px;
     margin-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
   }
   #signup-mobile {
     right:18%;
@@ -17,7 +21,7 @@
     color: black;
     padding:10px;
     border-radius: 5px;
-    padding:15px 2px 15px 2px;
+    padding:15px 5px 15px 5px;
   }
   #login-mobile:hover, #signup-mobile:hover {
     background-color: #72C02C;
@@ -124,6 +128,10 @@
   #navbar-links > li > a, #navbar-search > .form-group > input { 
       font-size: 11px;
   }
+  .navbar-nav {
+      left: 23%;
+      position: absolute;
+  }
 }
 
 @media (min-width: 961px){
@@ -168,12 +176,19 @@
   #navbar-search > .form-group > input {
       width: 145px;
   }
+  #navbar-search {
+    left: 52%;
+  }
   #search-form > input {
     width: 165px;
   }
   #search-form {
     padding-left: 15px;
     width: 165px;
+  }
+  .navbar-nav {
+      left: 18%;
+      position: absolute;
   }
 }
 
@@ -187,6 +202,7 @@
   #navbar-search {
       margin-left: 0px;
       padding-left: 2px;
+      left: 47%;
   }
   .navbar-default .navbar-nav>li>a {
     padding-left:10px;
@@ -196,6 +212,10 @@
   .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
       margin-right: 0;
       margin-left: 150px;
+  }
+  .navbar-nav {
+      left: 16%;
+      position: absolute;
   }
 }
 
