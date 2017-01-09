@@ -7,7 +7,7 @@
 <html lang="en"> <!--<![endif]-->
 <head>
     <title>Introducing Great Hearts</title>
-
+    <script src="https://cdn.auth0.com/js/lock/10.0/lock.min.js"></script>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -142,13 +142,21 @@
             <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header ">
-                            <a id="login-mobile" data-toggle="modal" data-target="#signupModal" href="#">
+                    <ul id="mobile-list">
+                        <li>
+                            <a onClick="signUpLock.show();" class="login-button" id="login-mobile" href="#">
                                 Login
                             </a>
-                          
-                            <a id="signup-mobile" data-toggle="modal" data-target="#signupModal" href="#">
-                                Sign Up  |
+                            
+                        </li>
+                        <li>
+                            <a class="signup--button" id="signup-mobile" data-toggle="modal" data-target="#signupModal" href="#">
+                                Sign Up
                             </a>
+                            
+                        </li>
+                    </ul>
+                          
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
@@ -163,7 +171,7 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
+                    <ul class="nav navbar-nav" id="navbar-links">
                         <li>
                             <a href="index.html">HOME</a>
                         </li>
@@ -186,17 +194,16 @@
                             <div class="btn btn-default" id="search-btn"><i class="search fa fa-search search-btn"></i></div>
                         </a>
                     </form>
-                    <ul class="nav navbar-nav navbar-right" id="login">
+                    <ul class="nav navbar-nav navbar-right login" id="login">
                         <li>
-                            <a data-toggle="modal" data-target="#signupModal" href="#">
-                                Signup <i class="fa fa-sign-in"></i> 
+                            <a href="#" onClick="signUpLock.show();">
+                                Login
                             </a>
-                            <span>
-                                
-                                <a data-toggle="modal" data-target="#signupModal" href="#">
-                                    Login <i class="fa fa-sign-in"></i> 
-                                </a>
-                            </span>
+                        </li>
+                        <li>
+                            <a class="signup-button" data-toggle="modal" data-target="#signupModal" href="#">
+                                Signup
+                            </a>
                         </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -520,48 +527,6 @@
     </div>
     <!--=== End Slider ===-->
 
-    <!--=== Call To Action ===-->
-    <!--<div class="call-action-v1 bg-color-light">-->
-    <!--<div class="container">-->
-    <!--<div class="call-action-v1-box">-->
-    <!--<div class="call-action-v1-in">-->
-    <!--<p>Celebrate and support the people and organizations that are making a difference.</p>-->
-    <!--</div>-->
-    <!--<div class="call-action-v1-in inner-btn">-->
-    <!--<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-dark btn-u-block">Join In</a>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--=== End Call To Action ===-->
-
-    <!-- Service Blocks -->
-    <!--<div class="row margin-bottom-30">-->
-    <!--<div class="col-md-4">-->
-    <!--<div class="service">-->
-    <!--<i class="fa fa-compress service-icon"></i>-->
-    <!--<div class="desc">-->
-    <!--<h4>Fully Responsive</h4>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-md-4">-->
-    <!--<div class="service">-->
-    <!--<i class="fa fa-cogs service-icon"></i>-->
-    <!--<div class="desc">-->
-    <!--<h4>HTML5 + CSS3</h4>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-md-4">-->
-    <!--<div class="service">-->
-    <!--<i class="fa fa-rocket service-icon"></i>-->
-    <!--<div class="desc">-->
-    <!--<h4>Launch Ready</h4>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
     <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
          aria-hidden="true">
         <div class="modal-dialog">
@@ -599,9 +564,8 @@
                         clicklets
                         for the <em>Giver's Choice Awards</em>.</h5>
                     <div id="auth0-root" style="width: 320px; margin: 40px auto; padding: 10px;"></div>
-                    <script src="https://cdn.auth0.com/js/lock/10.0/lock.min.js"></script>
                     <script type="text/javascript">
-                        var lock = new Auth0Lock('H3M1d2hsFo2hISIz6CUD6okg7Dew6rDI', 'greathearts.auth0.com', {
+                          var lock = new Auth0Lock('H3M1d2hsFo2hISIz6CUD6okg7Dew6rDI', 'greathearts.auth0.com', {
                             container: 'auth0-root',
                             auth: {
                                 redirectUrl: 'https://app.greathearts.community/auth/auth0/callback',
@@ -616,9 +580,8 @@
                             },
                             rememberLastLogin: false,
                             initialScreen: 'signUp',
-                        });
-
-                        lock.show();
+                          });
+                          lock.show();
                     </script>
 
                 </div>
@@ -2202,6 +2165,9 @@
 <script type="text/javascript" src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
 <script type="text/javascript" src="assets/js/forms/signup.js"></script>
 <script type="text/javascript" src="assets/plugins/2.0.5_stamplay.js"></script>
+
+<!-- Auth0 -->
+
 <script type="text/javascript">
     jQuery(document).ready(function () {
         $("#footer").load("footer.html");

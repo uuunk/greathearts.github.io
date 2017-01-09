@@ -29,4 +29,20 @@ $(document).ready(function() {
       window.location.href = searchLink;        
     }
   });
-})  
+});
+
+var signUpLock = new Auth0Lock('H3M1d2hsFo2hISIz6CUD6okg7Dew6rDI', 'greathearts.auth0.com', {
+  auth: {
+      redirectUrl: 'https://app.greathearts.community/auth/auth0/callback',
+      responseType: 'code',
+      params: {
+          scope: 'openid email', // Learn about scopes: https://auth0.com/docs/scopes
+      }
+  },
+  theme: {
+      logo: "assets/img/GHILogo2.png",
+      primaryColor: '#72C02C'
+  },
+  rememberLastLogin: false,
+  initialScreen: 'login',
+});
