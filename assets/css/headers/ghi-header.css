@@ -1,39 +1,4 @@
-@media (min-width: 845px){
-  .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
-      margin-right: 0;
-      margin-left: 200px;
-  }
-  #navbar-search {
-    left: 60%;
-    position: absolute;
-  }
-}
-
-@media (min-width: 768px){
-  #login-mobile, #signup-mobile  {
-    visibility: hidden;
-    list-style: none;
-  }
-  .navbar-nav {
-      float: left;
-      margin: 0;
-      left: 24%;
-      position: absolute;
-  }
-  #login {
-    left: 85%;
-  }
-  #navbar-search {
-    left: 55%;
-    position: absolute;
-  }
-  #login > li {
-    list-style: none;
-    visibility: visible;
-  }
-}
-
-@media (max-width: 768px){
+@media (max-width: 767px){
   #login-mobile {
     right: 35%;
     font-size: 11px;
@@ -68,6 +33,7 @@
     border: 1px solid #A2A2A2;
     border-radius: 5px;
     padding: 5px 0px 5px 0px;
+    margin-left: 60px;
   }
   .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
       margin-right: 0px;
@@ -90,12 +56,11 @@
     visibility: hidden;
   }
   #navbar-search > .form-group > input {
-      border: none;
-      width: 180px;
-      padding: 0px;
+    width: 180px;
+    padding: 0px;
   }
   #navbar-search {
-      left: -35px;
+    left: -35px;
   }
   .navbar-toggle {
     border:none;
@@ -105,7 +70,114 @@
   }
 }
 
-@media (max-width: 1266px){
+@media (min-width: 768px){
+  #login-mobile, #signup-mobile  {
+    visibility: hidden;
+    list-style: none;
+  }
+  .navbar-nav {
+      font-size: 11px;
+      float: left;
+      margin: 0;
+      left: 24%;
+      position: absolute;
+  }
+  .navbar-form {
+    padding: 10px 12;
+  }
+  #login {
+    left: 85%;
+  }
+  #navbar-search {
+    left: 55%;
+    position: absolute;
+  }
+  #login > li, {
+    list-style: none;
+    visibility: visible;
+  }
+  #navbar-links > li > a { 
+      font-size: 10px;
+  }
+  .nav > li > a {
+      padding: 13px 5px 10px 5px;
+  }
+  #navbar-links > li > a, #navbar-search > .form-group > input { 
+      font-size: 10px;
+  }
+  .nav > li > a {
+      padding: 13px 5px 10px 5px;
+  }
+  #search-form > input {
+      width: 110px;
+  }
+  #search-form {
+      padding-left: 0px;
+      width: 110px;
+  }
+  #navbar-search {
+    margin-left: 55px;
+  }
+}
+
+@media (min-width: 830px){
+  #navbar-links > li > a, #navbar-search > .form-group > input { 
+      font-size: 11px;
+  }
+}
+
+@media (min-width: 961px){
+  #navbar-links > li > a { 
+    font-size: 13px;
+  }
+  .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+      margin-right: 0;
+      margin-left: 200px;
+  }
+  #navbar-search {
+    left: 60%;
+    position: absolute;
+    margin-left: 10px;
+  }
+  #navbar-search > .form-group > input {
+      border: none;
+      width: 145px;
+      font-size: 12px;
+  }
+  #search-form {
+      padding-left: 0px;
+      width: 140px;
+  }
+}
+
+@media (min-width: 1085px){
+  .navbar-default .navbar-nav>li>a {
+    font-size: 12px;
+    padding-left:6px;
+    padding-right: 6px;
+  }
+  .navbar input {
+    font-size: 12px;
+  }
+  .login a {
+    padding-left:0px;
+  }
+  .navbar-form .form-group {
+      width: 121px;
+  }
+  #navbar-search > .form-group > input {
+      width: 145px;
+  }
+  #search-form > input {
+    width: 165px;
+  }
+  #search-form {
+    padding-left: 15px;
+    width: 165px;
+  }
+}
+
+@media (min-width: 1281px){
   .navbar-form .form-group {
       display: inline-block;
       margin-bottom: 0;
@@ -127,24 +199,6 @@
   }
 }
 
-@media (max-width: 1046px){
-  .navbar-default .navbar-nav>li>a {
-    font-size: 11px;
-    padding-left:6px;
-    padding-right: 6px;
-  }
-  .navbar input {
-    font-size: 10px;
-    width:40px;
-  }
-  .login a {
-    padding-left:0px;
-  }
-  .navbar-form .form-group {
-      width: 121px;
-  }
-}
-
 #mobile-list {
   list-style: none;
 }
@@ -160,15 +214,11 @@
   border-bottom: 5px solid #72C02C;
   background-color: white;
 }
-
 #navbar-search {
-  margin-left: 55px;
-  padding-left: 5%;
   border-left: 1px solid #A2A2A2;
 }
 #navbar-search > .form-group > input {
-  border: none;
-  width: 205px;
+    border: none;
 }
 .navbar {
   margin: 0px;
@@ -181,3 +231,4 @@
   color: black;
   font-size: 14px;
 }
+
