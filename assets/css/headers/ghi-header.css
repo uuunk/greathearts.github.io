@@ -3,6 +3,12 @@
       margin-right: 0;
       margin-left: 200px;
   }
+  #login-mobile {
+    visibility: hidden;
+  }
+  #signup-mobile {
+    visibility: hidden;
+  }
 }
 .logo > img {
  	max-width: 170px;
@@ -36,4 +42,109 @@
 .navbar-default .navbar-nav>li>a {
   color: black;
   font-size: 14px;
+}
+@media (max-width: 768px){
+  #login-mobile {
+    right: 28%;
+    font-size: 11px;
+    margin-right:5px;
+  }
+  #signup-mobile {
+    right:18%;
+  }
+  #login-mobile, #signup-mobile {
+    position:absolute;
+    top: 15px;
+    color: black;
+    padding:10px;
+    border-radius: 5px;
+    padding:15px 2px 15px 2px;
+  }
+  #login-mobile:hover, #signup-mobile:hover {
+    background-color: #72C02C;
+  }
+  #navbar-search{
+    height: 38px;
+    position: absolute;
+    left: -40px;
+    top: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    border: 1px solid #A2A2A2;
+    border-radius: 5px;
+    padding: 5px 0px 5px 0px;
+  }
+  .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+      margin-right: 0px;
+      margin-left: 0px; 
+  }
+  #search-form{
+    top: 1px;
+    position: absolute;
+    padding: 0px;
+    margin: 0px;
+    background: none;
+    left: 4px;
+  }
+  #search-btn{
+    position: absolute;
+    top: 1px;
+    left:200px;
+  }
+  #login {
+    visibility: hidden;
+  }
+  #navbar-search > .form-group > input {
+      border: none;
+      width: 180px;
+      padding: 0px;
+  }
+  #navbar-search {
+      left: 20px;
+  }
+  .navbar-toggle {
+    border:none;
+  }
+  #bs-example-navbar-collapse-1 {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 1185px){
+  .navbar-form .form-group {
+      display: inline-block;
+      margin-bottom: 0;
+      vertical-align: middle;
+      width: 170px;
+  }
+  #navbar-search {
+      margin-left: 0px;
+      padding-left: 2px;
+  }
+  .navbar-default .navbar-nav>li>a {
+    padding-left:10px;
+    padding-right: 10px;
+
+  }
+  .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+      margin-right: 0;
+      margin-left: 150px;
+  }
+}
+@media (max-width: 955px){
+  .navbar-default .navbar-nav>li>a {
+    font-size: 11px;
+    padding-left:6px;
+    padding-right: 6px;
+  }
+  .navbar input {
+    font-size: 10px;
+    width:40px;
+  }
+  #login a {
+    padding-left:0px;
+  }
+  .navbar-form .form-group {
+      width: 121px;
+  }
 }

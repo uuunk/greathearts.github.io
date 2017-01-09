@@ -15,9 +15,18 @@ $(document).ready(function() {
     });
   });
 
-  $('#navbar-search').on('keyup', 'input', function(e) {
+  $('#navbar-search').on('change', 'input', function(e) {
   	e.preventDefault();
-    var query = this.value;
-    $("#search-link").attr('href', 'https://app.greathearts.community/search_results?utf8=✓&query=' + query.split(' ').join('+'));
+    var query = $('input').val();
+    var searchLink = 'https://app.greathearts.community/search_results?utf8=✓&query=' + query.split(' ').join('+');
+    $("#search-link").attr('href', searchLink);  
+  });
+  $('#navbar-search').on('keypress', 'input', function(e) {
+    var query = $('input').val();
+    var searchLink = 'https://app.greathearts.community/search_results?utf8=✓&query=' + query.split(' ').join('+');
+    if ( e.which === 13 ) {
+      e.preventDefault();
+      window.location.href = searchLink;        
+    }
   });
 })  
