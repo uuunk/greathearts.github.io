@@ -1,4 +1,4 @@
-$(".testing").ready(function() {
+$("#causes-container").ready(function() {
   var request = $.ajax({
     url: 'https://app.greathearts.community/api/v1/organizations',
     method: 'get',
@@ -9,7 +9,7 @@ $(".testing").ready(function() {
     $('.orgs-squares').children().remove();
     $.each(orgsJson, function(index,value){
 
-      $(".orgs-squares").append("<li><figure class='org-square flex-vertically-center-content'><img src=" + value.logo_link + " alt="+ value.name + "><div class='img-hover'><a href=" + value.link + " target='_blank'><h4>" + value.name + "</h4></a></div></figure></li>")
+      $(".orgs-squares").append("<li><figure class='org-square '><img src=" + value.logo_link + " alt="+ value.name + "><div class='img-hover'><a href=" + value.link + " target='_blank'><h4>" + value.name + "</h4></a></div></figure></li>")
 
 
     });
