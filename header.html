@@ -1,86 +1,71 @@
-<div class="header">
-    <div class="container">
-        <!--<div class="ribbon-wrapper-green">-->
-            <!--<div class="ribbon-green">SOFT LAUNCH<br><small>(BETA)</small></div>-->
-        <!--</div>-->
-        <!-- Logo -->
-        <!-- End Logo -->
-        <a class="logo" href="index.html">
-            <img src="assets/img/GHILogo2.png" width="275px"/>
-        </a>
-        <!-- Topbar -->
-        <div class="topbar">
-            <ul class="loginbar pull-right">
-                <!--<li class="hoverSelector">-->
-                <!--<i class="fa fa-globe"></i>-->
-                <!--<a>Languages</a>-->
-                <!--<ul class="languages hoverSelectorBlock">-->
-                <!--<li class="active">-->
-                <!--<a href="#">English <i class="fa fa-check"></i></a>-->
-                <!--</li>-->
-                <!--<li><a href="#">Spanish</a></li>-->
-                <!--<li><a href="#">Russian</a></li>-->
-                <!--<li><a href="#">German</a></li>-->
-                <!--</ul>-->
-                <!--</li>-->
-                <!--<li class="topbar-devider"></li>-->
-                <li><a data-toggle="modal" data-target="#signupModal" href="#">Login / Sign up</a></li>
-                <!--<li class="topbar-devider hidden-xs"></li>-->
-                <!--&lt;!&ndash;<div class="visible-xs">&ndash;&gt;-->
-                <!--&lt;!&ndash;<br/>&ndash;&gt;-->
-                <!--&lt;!&ndash;</div>&ndash;&gt;-->
-                <!--<li><a href="#" data-toggle="modal" data-target="#signupModal">Sign In</a></li>-->
-            </ul>
-        </div>
-        <!-- End Topbar -->
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header ">
+                    <ul id="mobile-list">
+                        <li>
+                            <a onClick="signUpLock.show();" class="login-button btn-default" id="login-mobile" href="#">
+                                Login
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a class="signup--button" id="signup-mobile" data-toggle="modal" data-target="#signupModal" href="#">
+                                Sign Up
+                            </a>
+                            
+                        </li>
+                    </ul>
+                          
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
 
+                    <a class="logo" href="index.html">
+                        <img class="logo" src="assets/img/GHILogo2.png"/>
+                    </a>
+                </div>
 
-        <!-- Toggle get grouped for better mobile display -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse"
-                data-target=".navbar-responsive-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="fa fa-bars"></span>
-        </button>
-        <!-- End Toggle -->
-    </div><!--/end container-->
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse navbar-responsive-collapse one-page-nav-scrolling">
-        <div class="container">
-            <ul class="nav navbar-nav">
-                <!-- Home -->
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="sponsors.html">Sponsors</a>
-                </li>
-                <li>
-                    <a href="orgs.html"><i class="fa fa-heart" style="color:red"></i> For Nonprofits</a>
-                </li>
-                <!--<li>-->
-                <!--<a href="employers.html">Employers</a>-->
-                <!--</li>-->
-                <!--<li>-->
-                <!--<a href="beta.html">In Beta</a>-->
-                <!--</li>-->
-                <li>
-                    <a href="about.html">About Us</a>
-                </li>
-                <!-- Search Block -->
-                <!--<li>-->
-                <!--<i class="search fa fa-search search-btn"></i>-->
-                <!--<div class="search-open">-->
-                <!--<div class="input-group animated fadeInDown">-->
-                <!--<input type="text" class="form-control" placeholder="Search">-->
-                <!--<span class="input-group-btn">-->
-                <!--<button class="btn-u" type="button">Go</button>-->
-                <!--</span>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!--</li>-->
-                <!-- End Search Block -->
-            </ul>
-        </div><!--/end container-->
-    </div><!--/navbar-collapse-->
-</div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav" id="navbar-links">
+                        <li>
+                            <a class="navbar-link" href="index.html">HOME</a>
+                        </li>
+                        <li>
+                            <a class="navbar-link" href="sponsors.html">SPONSORS</a>
+                        </li>
+                        <li>
+                            <a class="navbar-link" href="orgs.html"><i class="fa fa-heart" style="color:red"></i> FOR NONPROFITS</a>
+                        </li>
+                        <li>
+                            <a class="navbar-link" href="about.html">ABOUT US</a>
+                        </li>
+                    </ul>
+                    <!-- navbar search -->
+                    <form class="navbar-form navbar-left" id="navbar-search">
+                        <div class="form-group" id="search-form"> 
+                            <input type="text" placeholder="Find your cause/friends...">
+                        </div>
+                        <a id="search-link" href="">
+                            <div class="btn btn-default" id="search-btn"><i class="search fa fa-search search-btn"></i></div>
+                        </a>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right login" id="login">
+                        <li>
+                            <a class="signup-button btn-primary" data-toggle="modal" data-target="#signupModal" href="#">
+                                Signup
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn-default" href="#" onClick="signUpLock.show();">
+                                Login
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>

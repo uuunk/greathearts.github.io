@@ -7,7 +7,7 @@
 <html lang="en"> <!--<![endif]-->
 <head>
     <title>Introducing Great Hearts</title>
-
+    <script src="https://cdn.auth0.com/js/lock/10.0/lock.min.js"></script>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- CSS Header and Footer -->
-    <link rel="stylesheet" href="assets/css/headers/header-default.css">
+    <link rel="stylesheet" href="assets/css/headers/ghi-header.css">
     <link rel="stylesheet" href="assets/css/footers/footer-v1.css">
 
     <!-- CSS Implementing Plugins -->
@@ -65,13 +65,6 @@
     <!-- CSS Customization -->
     <link rel="stylesheet" href="assets/css/custom.css">
 
-    <script src="https://instantcm.com/js/v2/latest/txt-min.js"></script>
-    <script>
-        var options = {
-            id: "bed07ec1-563d-4046-ad1f-07a23c311ff7"
-        };
-        Txt.render(options);
-    </script>
     <!-- structured data markup -->
     <script type="application/ld+json">
         {
@@ -144,7 +137,79 @@
 
 <div class="wrapper">
     <!--=== Header ===-->
-    <div id="header"></div>
+    <div id="header">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header ">
+                    <ul id="mobile-list">
+                        <li>
+                            <a onClick="signUpLock.show();" class="login-button btn-default" id="login-mobile" href="#">
+                                Login
+                            </a>
+                            
+                        </li>
+                        <li>
+                            <a class="signup--button" id="signup-mobile" data-toggle="modal" data-target="#signupModal" href="#">
+                                Sign Up
+                            </a>
+                            
+                        </li>
+                    </ul>
+                          
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                    <a class="logo" href="index.html">
+                        <img class="logo" src="assets/img/GHILogo2.png"/>
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav" id="navbar-links">
+                        <li>
+                            <a class="navbar-link" href="index.html">HOME</a>
+                        </li>
+                        <li>
+                            <a class="navbar-link" href="sponsors.html">SPONSORS</a>
+                        </li>
+                        <li>
+                            <a class="navbar-link" href="orgs.html"><i class="fa fa-heart" style="color:red"></i> FOR NONPROFITS</a>
+                        </li>
+                        <li>
+                            <a class="navbar-link" href="about.html">ABOUT US</a>
+                        </li>
+                    </ul>
+                    <!-- navbar search -->
+                    <form class="navbar-form navbar-left" id="navbar-search">
+                        <div class="form-group" id="search-form"> 
+                            <input type="text" placeholder="Find your cause/friends...">
+                        </div>
+                        <a id="search-link" href="">
+                            <div class="btn btn-default" id="search-btn"><i class="search fa fa-search search-btn"></i></div>
+                        </a>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right login" id="login">
+                        <li>
+                            <a class="signup-button btn-primary" data-toggle="modal" data-target="#signupModal" href="#">
+                                Signup
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn-default" href="#" onClick="signUpLock.show();">
+                                Login
+                            </a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
     <!--=== End Header ===-->
 
     <!--=== Slider ===-->
@@ -462,48 +527,6 @@
     </div>
     <!--=== End Slider ===-->
 
-    <!--=== Call To Action ===-->
-    <!--<div class="call-action-v1 bg-color-light">-->
-    <!--<div class="container">-->
-    <!--<div class="call-action-v1-box">-->
-    <!--<div class="call-action-v1-in">-->
-    <!--<p>Celebrate and support the people and organizations that are making a difference.</p>-->
-    <!--</div>-->
-    <!--<div class="call-action-v1-in inner-btn">-->
-    <!--<a href="#" class="btn-u btn-brd btn-brd-hover btn-u-dark btn-u-block">Join In</a>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--=== End Call To Action ===-->
-
-    <!-- Service Blocks -->
-    <!--<div class="row margin-bottom-30">-->
-    <!--<div class="col-md-4">-->
-    <!--<div class="service">-->
-    <!--<i class="fa fa-compress service-icon"></i>-->
-    <!--<div class="desc">-->
-    <!--<h4>Fully Responsive</h4>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-md-4">-->
-    <!--<div class="service">-->
-    <!--<i class="fa fa-cogs service-icon"></i>-->
-    <!--<div class="desc">-->
-    <!--<h4>HTML5 + CSS3</h4>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-md-4">-->
-    <!--<div class="service">-->
-    <!--<i class="fa fa-rocket service-icon"></i>-->
-    <!--<div class="desc">-->
-    <!--<h4>Launch Ready</h4>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</div>-->
     <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
          aria-hidden="true">
         <div class="modal-dialog">
@@ -541,9 +564,8 @@
                         clicklets
                         for the <em>Giver's Choice Awards</em>.</h5>
                     <div id="auth0-root" style="width: 320px; margin: 40px auto; padding: 10px;"></div>
-                    <script src="https://cdn.auth0.com/js/lock/10.0/lock.min.js"></script>
                     <script type="text/javascript">
-                        var lock = new Auth0Lock('H3M1d2hsFo2hISIz6CUD6okg7Dew6rDI', 'greathearts.auth0.com', {
+                          var lock = new Auth0Lock('H3M1d2hsFo2hISIz6CUD6okg7Dew6rDI', 'greathearts.auth0.com', {
                             container: 'auth0-root',
                             auth: {
                                 redirectUrl: 'https://app.greathearts.community/auth/auth0/callback',
@@ -558,9 +580,8 @@
                             },
                             rememberLastLogin: false,
                             initialScreen: 'signUp',
-                        });
-
-                        lock.show();
+                          });
+                          lock.show();
                     </script>
 
                 </div>
@@ -2144,9 +2165,11 @@
 <script type="text/javascript" src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
 <script type="text/javascript" src="assets/js/forms/signup.js"></script>
 <script type="text/javascript" src="assets/plugins/2.0.5_stamplay.js"></script>
+
+<!-- Auth0 -->
+
 <script type="text/javascript">
     jQuery(document).ready(function () {
-        $("#header").load("header.html");
         $("#footer").load("footer.html");
         App.init();
         FancyBox.initFancybox();
