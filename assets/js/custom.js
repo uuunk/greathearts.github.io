@@ -29,6 +29,8 @@ $(document).ready(function() {
       window.location.href = searchLink;        
     }
   });
+
+  
 });
 
 var signUpLock = new Auth0Lock('H3M1d2hsFo2hISIz6CUD6okg7Dew6rDI', 'greathearts.auth0.com', {

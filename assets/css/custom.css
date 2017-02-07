@@ -23,7 +23,21 @@
     top: -15px;
     right: -3px;
 }
-
+#preview {
+    height: 1800px;
+    border: none;
+}
+@media (max-width: 993px) {
+  #preview {
+    height: 3600px;
+  }
+}
+@media (max-width: 540px) {
+  #preview {
+    height: 3800px;
+    width: 380px;
+  }
+}
 .ribbon-green {
     font: bold 18px Sans-Serif;
     color: #333;
