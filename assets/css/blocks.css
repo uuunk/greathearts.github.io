@@ -4603,6 +4603,16 @@
   background: rgba(0,0,0,0.3);
 }
 
+.slider-org:after {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  content: ' ';
+  position: absolute;
+}
+
 .revolution-ch1 {
   color: #fff;
   font-size: 58px;
