@@ -373,7 +373,7 @@
                             <section>
                                 <label class="label">Comments/Questions</label>
                                 <label class="textarea">
-                                    <i class="icon-append fa fa-comment"></i>
+                                    <i class="icon-append fa fa-comment" style='border-bottom: 1px solid #b3b3b3;'></i>
                                     <textarea rows="4" name="message" id="message"></textarea>
                                 </label>
                             </section>
@@ -487,20 +487,21 @@
 <script type="text/javascript" src="assets/js/plugins/owl-carousel.js"></script>
 <script type="text/javascript" src="assets/plugins/image-hover/js/modernizr.js"></script>
 <script type="text/javascript" src="assets/plugins/image-hover/js/touch.js"></script>
-<script type="text/javascript" src="assets/plugins/sky-forms-pro/skyforms/js/jquery.validate.min.js"></script>
-<script type="text/javascript" src="assets/plugins/sky-forms-pro/skyforms/js/jquery.maskedinput.min.js"></script>
-<script type="text/javascript" src="assets/plugins/sky-forms-pro/skyforms/js/jquery-ui.min.js"></script>
-<script type="text/javascript" src="assets/plugins/sky-forms-pro/skyforms/js/jquery.form.min.js"></script>
+
 <script type="text/javascript" src="assets/js/forms/org.js"></script>
-<script src="https://drrjhlchpvi7e.cloudfront.net/libs/stamplay-js-sdk/2.0.5/stamplay.min.js"></script>
 <script type="text/javascript">
-    jQuery(document).ready(function () {
-        $("#footer").load("footer.html");
-        App.init();
-        FancyBox.initFancybox();
-        RevolutionSlider.initRSGreatHearts();
-        OwlCarousel.initOwlCarousel();
-        OrgForm.initOrgForm();
+    $(document).on('submit','#orgForm', function(e){
+        e.preventDefault();
+        var data = $(this).serializeArray();
+        var request = $.ajax({
+            url: 'https://localhost:3333/api/v1/organizations/org_recommendation',
+            method: 'get',
+            data: data
+        });
+
+        request.done(function(response){
+            debugger      
+        });
     });
 </script>
 <!--[if lt IE 9]>
