@@ -494,13 +494,14 @@
         e.preventDefault();
         var data = $(this).serializeArray();
         var request = $.ajax({
-            url: 'https://localhost:3333/api/v1/organizations/org_recommendation',
-            method: 'get',
-            data: data
+            url: 'https://app.greathearts.community/api/v1/organizations/org_recommendation',
+            method: 'post',
+            data: data,
+            crossDomain: true
         });
 
         request.done(function(response){
-            debugger      
+            
         });
     });
 </script>
