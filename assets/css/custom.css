@@ -108,3 +108,11 @@ background: rgba(241,241,241,0.8);
     width: 300px;
   }
 }
+.flex-center-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#topcontrol {
+    display: none;
+}
