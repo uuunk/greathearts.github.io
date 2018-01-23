@@ -384,11 +384,11 @@
                             <button type="submit" id="submitButton" class="button">Submit Form and Join In</button>
                         </footer>
 
-                        <div class="message">
-                            <i class="rounded-x fa fa-check"></i>
-                            <p>Your request was successfully sent!</p>
-                        </div>
                     </form>
+
+                    <h1 class="success-msg" style='display:none; color: white; background-color: #72C02C; height: 50px; border-radius: 10px;' align='center'>
+                        Your request was successfully sent!
+                    </h1>
                 </div>
             </div>
         </div>
@@ -501,7 +501,8 @@
         });
 
         request.done(function(response){
-            
+            $('#orgForm').remove();
+            $('.success-msg').addClass('flex-center-content').show();
         });
     });
 </script>
