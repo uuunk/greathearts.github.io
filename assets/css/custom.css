@@ -113,3 +113,6 @@ background: rgba(241,241,241,0.8);
   align-items: center;
   justify-content: center;
 }
+#topcontrol {
+    display: none;
+}
