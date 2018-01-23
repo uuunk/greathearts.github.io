@@ -38,6 +38,7 @@ $(document).ready(function() {
 var signUpLock = new Auth0Lock('H3M1d2hsFo2hISIz6CUD6okg7Dew6rDI', 'greathearts.auth0.com', {
   auth: {
       redirectUrl: 'https://app.greathearts.community/auth/auth0/callback',
+      allowedConnections: ['Username-Password-Authentication','facebook','google-oauth2'],
       responseType: 'code',
       params: {
           scope: 'openid email', // Learn about scopes: https://auth0.com/docs/scopes
