@@ -36,6 +36,7 @@ $(document).ready(function() {
 });
 
 var signUpLock = new Auth0Lock('H3M1d2hsFo2hISIz6CUD6okg7Dew6rDI', 'greathearts.auth0.com', {
+  allowedConnections: ['Username-Password-Authentication','facebook','google-oauth2'],
   auth: {
       redirectUrl: 'https://app.greathearts.community/auth/auth0/callback',
       responseType: 'code',
