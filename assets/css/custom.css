@@ -73,12 +73,12 @@
     display: none;
 }
 
-#auth0-root .auth0-lock.auth0-lock > .auth0-lock-header-logo {
-        height: auto !important;
-        width: 100% !important;
-    }
+#auth0-root .auth0-lock.auth0-lock .auth0-lock-header-logo {
+    height: auto !important;
+    width: 100% !important;
+    
 }
-.auth0-lock.auth0-lock > .auth0-lock-header-logo {
+.auth0-lock.auth0-lock .auth0-lock-header-logo {
     height: auto !important;
     width: 100% !important;
     padding-top: 25px;
