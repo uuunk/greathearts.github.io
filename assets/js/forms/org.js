@@ -25,6 +25,10 @@ var OrgForm = function () {
                     {
                         required: true
                     },
+                    ein:
+                    {
+                        required: true
+                    },
                     email:
                     {
                         required: true,
