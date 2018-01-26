@@ -370,7 +370,14 @@
                                     </label>
                                 </section>
                             </div>
-
+                            <div class="row">
+                                <section class="col col-12">
+                                    <label class="label">EIN</label>
+                                    <label class="input">
+                                        <input type="text" name="ein" id="ein">
+                                    </label>
+                                </section>
+                            </div>
                             <section>
                                 <label class="label">Comments/Questions</label>
                                 <label class="textarea">
@@ -509,7 +516,7 @@
         e.preventDefault();
         var data = $(this).serializeArray();
         var request = $.ajax({
-            url: 'https://app.greathearts.community/api/v1/organizations/org_recommendation',
+            url: 'http://localhost:3000/api/v1/organizations/org_recommendation',
             method: 'post',
             data: data,
             crossDomain: true
