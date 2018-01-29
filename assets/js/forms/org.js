@@ -73,30 +73,24 @@ var OrgForm = function () {
                 // Ajax form submition
                 submitHandler: function(form)
                 {
-                    Stamplay.init("greathearts");
-
-                    var data =
-                    {
-                        "email": $(form).find("#email").val(),
-                        "firstName": $(form).find("#firstName").val(),
-                        "lastName": $(form).find("#lastName").val(),
-                        "phone": $(form).find("#phone").val(),
-                        "message": $(form).find("#message").val(),
-                        "orgName": $(form).find("#orgName").val(),
-                        "title": $(form).find("#title").val(),
-                    };
-
-                    // With Promise
-                    Stamplay.Object("orgs")
-                        .save(data)
-                        .then(function(res) {
-                            $(form).addClass('submited');
-                            $(form).find('#submitButton').hide();
-                        }, function(err) {
-                            console.log(err);
+                    
+                    $(document).on('submit','#orgForm', function(e){
+                        e.preventDefault();
+                        var data = $(this).serializeArray();
+                        var request = $.ajax({
+                            url: 'https://app.greathearts.community/api/v1/organizations/org_recommendation',
+                            method: 'post',
+                            data: data,
+                            crossDomain: true
                         });
 
-                    return false;//prevent default submit behavior
+                        request.done(function(response){
+                            $('#orgForm').remove();
+                            $('.success-msg').addClass('flex-center-content').show();
+                        });
+                    });
+                    Stamplay.init("greathearts");
+
                 },
 
                 // Do not change code below

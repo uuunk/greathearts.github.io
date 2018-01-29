@@ -511,23 +511,6 @@
         OrgForm.initOrgForm();
     });
 </script>
-<script type="text/javascript">
-    $(document).on('submit','#orgForm', function(e){
-        e.preventDefault();
-        var data = $(this).serializeArray();
-        var request = $.ajax({
-            url: 'http://localhost:3000/api/v1/organizations/org_recommendation',
-            method: 'post',
-            data: data,
-            crossDomain: true
-        });
-
-        request.done(function(response){
-            $('#orgForm').remove();
-            $('.success-msg').addClass('flex-center-content').show();
-        });
-    });
-</script>
 <!--[if lt IE 9]>
 <script src="assets/plugins/respond.js"></script>
 <script src="assets/plugins/html5shiv.js"></script>
