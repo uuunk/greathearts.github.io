@@ -78,7 +78,7 @@ var OrgForm = function () {
                         e.preventDefault();
                         var data = $(this).serializeArray();
                         var request = $.ajax({
-                            url: 'https://app.greathearts.community/api/v1/organizations/org_recommendation',
+                            url: 'https://great-hearts-test.herokuapp.com/api/v1/organizations/org_recommendation',
                             method: 'post',
                             data: data,
                             crossDomain: true
